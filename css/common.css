@@ -1,0 +1,140 @@
+:root{
+    --pink: #E27396;
+    --blush: #FF009D;
+    --lace-pink: #EFCFE3;
+    --beige: #EAF2D7;
+    --blue: #B3DEE2;
+    --black: #232323;
+}
+
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+background: var(--lace-pink);
+    /* background-image: linear-gradient(rgba(250, 242, 150, .7) .1em, transparent .1em), linear-gradient(90deg, rgba(250, 242, 150, .7) .1em, transparent .1em);
+    background-size: 3em 3em;  */
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-weight: 100;
+    color: var(--pink);
+    margin-bottom: 1rem;
+    font-size: 65px;
+}
+
+#new-task-form{
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task{
+    flex: 1 1 0%;
+    background-color: var(--beige);
+    color: var(--pink);
+    padding: 0.6rem 0.5rem;
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+    border: 1px solid var(--pink);
+}
+
+#new-task::placeholder{
+    color: var(--pink);
+}
+
+#add-new-task{
+    background-color: var(--beige);
+    padding: 0.5rem 0.5rem;
+    color: var(--pink);
+    border-radius: 0.3rem;
+    border: 1px solid var(--pink);
+}
+
+#add-new-task:hover{
+    color: var(--blush);
+}
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contents{
+    color: var(--pink);
+}
+
+.tasks-list h2{
+    font-weight: 100;
+    color: var(--pink);
+    margin-bottom: 1rem;
+    font-size: 65px;
+}
+
+#all-tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--beige);
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--pink);
+    transition: 0.4s;
+}
+
+#all-tasks .task:hover{
+    background-color: #E6ECD5;
+}
+
+.task .contents{
+    flex: 1 1 1%;
+}
+
+.task .contents .text{
+    color: var(--pink);
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.task .contents .text:not(:read-only){
+    color: var(--blush);
+}
+
+.task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.actions button {
+    cursor:pointer;
+    margin: 0 0.5;
+    color: var(--pink);
+}
+
+.actions button:hover{
+    color: var(--blush);
+}
